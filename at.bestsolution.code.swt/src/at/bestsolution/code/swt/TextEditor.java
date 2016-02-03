@@ -17,7 +17,9 @@
  *******************************************************************************/
 package at.bestsolution.code.swt;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -72,13 +74,21 @@ public class TextEditor {
 
 	public TextEditor() {
 		if( font == null ) {
-			try {
-				FileLocator.toFileURL(getClass().getClassLoader().getResource("at/bestsolution/code/swt/hack/Hack-Regular.ttf"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			loadFont("Hack-Bold");
+			loadFont("Hack-BoldItalic");
+			loadFont("Hack-Italic");
+			loadFont("Hack-Regular");
 			font = new Font(Display.getCurrent(), "Hack", Display.getCurrent().getSystemFont().getFontData()[0].getHeight(), SWT.NORMAL);
+		}
+	}
+
+	private static void loadFont(String name) {
+		try {
+			File f = new File(FileLocator.toFileURL(TextEditor.class.getClassLoader().getResource("at/bestsolution/code/swt/hack/"+name+".ttf")).toURI());
+			Display.getCurrent().loadFont(f.getAbsolutePath());
+		} catch (URISyntaxException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
