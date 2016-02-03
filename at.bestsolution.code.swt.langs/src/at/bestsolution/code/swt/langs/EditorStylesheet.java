@@ -42,7 +42,7 @@ public class EditorStylesheet implements Stylesheet {
 				, createURL("kotlin")
 				, createURL("lua")
 				, createURL("php")
-				, createURL("python")
+				, createURL("py")
 				, createURL("rust")
 				, createURL("swift")
 				, createURL("ts")
