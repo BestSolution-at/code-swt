@@ -21,12 +21,12 @@ and extract it somewhere on your hard drive
 
 You need to clone:
 * This repository - https://github.com/BestSolution-at/code-swt.git
-* (Optional) Dart Edit - https://github.com/BestSolution-at/dartedit.git - if you want to try enhanced Dart features
+* Dart Edit - https://github.com/BestSolution-at/dartedit.git - if you want to try enhanced Dart features
 * (Optional) Syntax Highlighting - https://git.eclipse.org/r/efxclipse/org.eclipse.efxclipse - if you want to add highlightings for not yet supported languages
 
 ## Import Sources
 * Import everything from `code-swt.git` into your workspace
-* (Optional) Import the following projects from `dartedit.git`
+* Import the following projects from `dartedit.git`
  * `at.bestsolution.dart.editor.services`
  * `at.bestsolution.dart.editor.services.e4`
  * `at.bestsolution.dart.server.api`
@@ -50,7 +50,7 @@ You need to clone:
 * Run the `New File` action found next to the `New Project` and name the file `Sample.dart`
 * Open the file
 
-### Add Enhanced Dart features
+### Add Enhanced Dart features (if you have the Dart SDK installed)
 
 * Open the launch configuration dialog for the product and navigate to the `Arguments`-Tab
 * Add a System-Property in the VM-arguments Text-Area `-Ddart.sdkdir=PATH_TO_EXTRACTED_DART_SDK`
