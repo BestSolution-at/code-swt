@@ -1,0 +1,81 @@
+{
+  "$gtype": "StylesheetDefinition",
+  "colorList": [
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-code",
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-operator",
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-bracket",
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-keyword",
+      "rgb": "rgb(127, 0, 85)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-string",
+      "rgb": "rgb(42, 0, 255)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-number",
+      "rgb": "#6c83c4"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-doc",
+      "rgb": "rgb(63, 127, 95)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-api-doc",
+      "rgb": "rgb(63, 95, 191)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-buitin-type",
+      "rgb": "#74a567"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-annotation",
+      "rgb": "rgb(200, 200, 200)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-markup-doc",
+      "rgb": "rgb(63, 95, 191)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-markup-property-name",
+      "rgb": "rgb(0, 0, 128)"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-markup-property-value",
+      "rgb": "#7f007f"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-markup-tag",
+      "rgb": "#3f7f80"
+    },
+    {
+      "$gtype": "ColorDefinition",
+      "name": "-source-editor-markup-extra",
+      "rgb": "rgb(128, 128, 128)"
+    }
+  ],
+  "elementList": []
+}

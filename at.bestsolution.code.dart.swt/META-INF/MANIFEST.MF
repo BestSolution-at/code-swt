@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Swt
+Bundle-SymbolicName: at.bestsolution.code.dart.swt
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: at.bestsolution.code.swt,
+ org.eclipse.jface.text,
+ org.eclipse.fx.code.editor

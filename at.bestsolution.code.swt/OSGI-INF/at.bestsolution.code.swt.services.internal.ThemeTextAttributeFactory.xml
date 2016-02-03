@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="at.bestsolution.code.swt.services.internal.ThemeTextAttributeFactory">
+   <service>
+      <provide interface="at.bestsolution.code.swt.services.TextAttributeFactory"/>
+      <provide interface="at.bestsolution.code.swt.themes.ThemeManager"/>
+   </service>
+   <reference bind="registerTheme" cardinality="0..n" interface="at.bestsolution.code.swt.themes.Theme" name="registerTheme" policy="dynamic" unbind="unregisterTheme"/>
+   <implementation class="at.bestsolution.code.swt.services.internal.ThemeTextAttributeFactory"/>
+</scr:component>

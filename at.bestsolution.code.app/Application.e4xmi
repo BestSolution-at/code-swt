@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_ZkqhUMDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_ZkqhWcDsEeWDntQZZP1dXQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_ZkqhUcDsEeWDntQZZP1dXQ" label="at.bestsolution.code.app" width="500" height="400">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_URd2wMIHEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.partsashcontainer.0" horizontal="true">
+      <children xsi:type="basic:Part" xmi:id="_V8l70MIHEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.part.0" containerData="20" contributionURI="bundleclass://at.bestsolution.code.swt.resources/at.bestsolution.code.swt.resources.WorkspaceViewer"/>
+      <children xsi:type="basic:PartStack" xmi:id="_cLP2cMIHEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.partstack.0" containerData="60">
+        <tags>editorContainer</tags>
+      </children>
+      <children xsi:type="basic:Part" xmi:id="_cyAUcMIHEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.part.1" containerData="20"/>
+    </children>
+    <variables>selectedResource</variables>
+    <variables>activeInput</variables>
+    <mainMenu xmi:id="_bGX60MKQEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_cQMCkMKQEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.menu.file" label="File">
+        <children xsi:type="menu:Menu" xmi:id="_fPQbwMKQEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.menu.new" label="New">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_hqd58MKQEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.handledmenuitem.newproject" label="New Project" command="_YnHWcMIJEeWDntQZZP1dXQ"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_887lcMaJEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handledmenuitem.newfile" label="New File" command="_GcWGMMaKEeWjn9CUL8VWTg"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_RJvdAMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handledmenuitem.newfolder" label="New Folder" command="_LB1DkMaKEeWjn9CUL8VWTg"/>
+        </children>
+      </children>
+    </mainMenu>
+  </children>
+  <handlers xmi:id="_aUpPQMIJEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.handler.0" contributionURI="bundleclass://at.bestsolution.code.swt.resources/at.bestsolution.code.swt.resources.handlers.NewProjectHandler" command="_YnHWcMIJEeWDntQZZP1dXQ"/>
+  <handlers xmi:id="_Hs-AkMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handler.1" contributionURI="bundleclass://at.bestsolution.code.swt.resources/at.bestsolution.code.swt.resources.handlers.NewFileHandler" command="_GcWGMMaKEeWjn9CUL8VWTg"/>
+  <handlers xmi:id="_MJnLAMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handler.2" contributionURI="bundleclass://at.bestsolution.code.swt.resources/at.bestsolution.code.swt.resources.handlers.NewFolderHandler" command="_LB1DkMaKEeWjn9CUL8VWTg"/>
+  <handlers xmi:id="_YZ9ccMomEeW24urrs3Ys2Q" elementId="at.bestsolution.code.app.handler.3" contributionURI="bundleclass://org.eclipse.fx.code.editor.e4/org.eclipse.fx.code.editor.e4.handlers.SaveFile" command="_XB4PMMomEeW24urrs3Ys2Q"/>
+  <bindingTables xmi:id="_dscpwMomEeW24urrs3Ys2Q" elementId="at.bestsolution.code.app.bindingtable.0" bindingContext="_ZkqhWcDsEeWDntQZZP1dXQ">
+    <bindings xmi:id="_fDLzMMomEeW24urrs3Ys2Q" elementId="at.bestsolution.code.app.keybinding.0" keySequence="M1+S" command="_XB4PMMomEeW24urrs3Ys2Q"/>
+  </bindingTables>
+  <rootContext xmi:id="_ZkqhWcDsEeWDntQZZP1dXQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_ZkqhWsDsEeWDntQZZP1dXQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_ZkqhW8DsEeWDntQZZP1dXQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_YnHWcMIJEeWDntQZZP1dXQ" elementId="at.bestsolution.code.app.command.newproject" commandName="New Project"/>
+  <commands xmi:id="_GcWGMMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.command.newfile" commandName="New File"/>
+  <commands xmi:id="_LB1DkMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.command.newfolder" commandName="New Folder"/>
+  <commands xmi:id="_XB4PMMomEeW24urrs3Ys2Q" elementId="at.bestsolution.code.app.command.save" commandName="Save"/>
+  <addons xmi:id="_ZkqhUsDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_ZkqhU8DsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_ZkqhVMDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_ZkqhVcDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_ZkqhVsDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_ZkqhV8DsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_ZkqhWMDsEeWDntQZZP1dXQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_k02OQMnCEeW24urrs3Ys2Q" elementId="at.bestsolution.code.app.addon.0" contributionURI="bundleclass://org.eclipse.fx.code.editor.e4/org.eclipse.fx.code.editor.e4.addons.DirtyStateTrackingAddon"/>
+</application:Application>

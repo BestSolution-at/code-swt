@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="at.bestsolution.code.app"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/at.bestsolution.code.app/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="at.bestsolution.code.app">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

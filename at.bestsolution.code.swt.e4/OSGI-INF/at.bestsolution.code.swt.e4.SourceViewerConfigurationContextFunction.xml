@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0" name="at.bestsolution.code.swt.e4.SourceViewerConfigurationContextFunction">
+   <property name="service.context.key" value="org.eclipse.jface.text.source.SourceViewerConfiguration"/>
+   <service>
+      <provide interface="org.eclipse.e4.core.contexts.IContextFunction"/>
+   </service>
+   <reference bind="registerService" cardinality="0..n" interface="at.bestsolution.code.swt.services.SourceViewerConfigurationTypeProvider" name="registerService" policy="dynamic" policy-option="greedy" unbind="unregisterService"/>
+   <implementation class="at.bestsolution.code.swt.e4.SourceViewerConfigurationContextFunction"/>
+</scr:component>

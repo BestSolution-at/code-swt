@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="at.bestsolution.code.swt.services.internal.DefaultSourceViewerConfigurationTypeProvider">
+   <service>
+      <provide interface="at.bestsolution.code.swt.services.SourceViewerConfigurationTypeProvider"/>
+   </service>
+   <implementation class="at.bestsolution.code.swt.services.internal.DefaultSourceViewerConfigurationTypeProvider"/>
+</scr:component>
