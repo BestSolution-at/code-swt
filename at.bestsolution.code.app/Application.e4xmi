@@ -17,6 +17,7 @@
           <children xsi:type="menu:HandledMenuItem" xmi:id="_887lcMaJEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handledmenuitem.newfile" label="New File" command="_GcWGMMaKEeWjn9CUL8VWTg"/>
           <children xsi:type="menu:HandledMenuItem" xmi:id="_RJvdAMaKEeWjn9CUL8VWTg" elementId="at.bestsolution.code.app.handledmenuitem.newfolder" label="New Folder" command="_LB1DkMaKEeWjn9CUL8VWTg"/>
         </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_yz6G4MqCEeWaZO7D_NZ1Fg" elementId="at.bestsolution.code.app.handledmenuitem.save" label="Save" command="_XB4PMMomEeW24urrs3Ys2Q"/>
       </children>
     </mainMenu>
   </children>
