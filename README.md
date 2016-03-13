@@ -56,3 +56,7 @@ You need to clone:
 * Add a System-Property in the VM-arguments Text-Area `-Ddart.sdkdir=PATH_TO_EXTRACTED_DART_SDK`
 * Open the `Plug-ins`-Tab and add check the `at.bestsolution.code.dart.feature`
 * Click the `Run`-Button
+
+# Copyright & License
+
+All code is copyright by BestSolution.at and currently made available under GPLv3
