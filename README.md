@@ -59,4 +59,4 @@ You need to clone:
 
 # Copyright & License
 
-All code is copyright by BestSolution.at and currently made available under GPLv3
+All code is copyright by BestSolution.at and currently made available under EPL 1.0
