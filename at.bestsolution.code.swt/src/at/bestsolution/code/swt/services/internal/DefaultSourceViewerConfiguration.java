@@ -21,7 +21,6 @@ import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.fx.code.editor.Input;
 import org.eclipse.fx.code.editor.services.CompletionProposal;
 import org.eclipse.fx.code.editor.services.ProposalComputer;
-import org.eclipse.fx.code.editor.services.ProposalComputer.ProposalContext;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.ITextViewer;
 import org.eclipse.jface.text.contentassist.ContentAssistant;
@@ -143,7 +142,7 @@ public class DefaultSourceViewerConfiguration extends SourceViewerConfiguration 
 
 	List<ICompletionProposal> computeProposals(IDocument document, Integer offset) {
 		try {
-			return proposalComputer.compute(new ProposalContext(input, document, offset)).get()
+			return proposalComputer.compute().get()
 					.stream()
 					.map(proposalPresenter::createProposal)
 					.collect(Collectors.toList());

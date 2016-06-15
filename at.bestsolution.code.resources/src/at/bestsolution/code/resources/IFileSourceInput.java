@@ -142,4 +142,10 @@ public class IFileSourceInput implements SourceFileInput, LocalFile {
 	public java.nio.file.Path getPath() {
 		return file.getRawLocation().toFile().toPath();
 	}
+
+	@Override
+	public void reload() {
+		// TODO Auto-generated method stub
+
+	}
 }

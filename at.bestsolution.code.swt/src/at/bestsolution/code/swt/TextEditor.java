@@ -16,6 +16,7 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -26,11 +27,18 @@ import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
 import org.eclipse.fx.code.editor.Input;
+import org.eclipse.fx.code.editor.services.ContextInformation;
+import org.eclipse.fx.code.editor.services.DelegatingEditingContext;
+import org.eclipse.fx.code.editor.services.EditingContext;
+import org.eclipse.fx.core.Subscription;
 import org.eclipse.fx.core.di.ContextBoundValue;
 import org.eclipse.fx.core.di.ContextValue;
+import org.eclipse.fx.core.text.TextEditAction;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IDocumentExtension3;
 import org.eclipse.jface.text.IDocumentPartitioner;
+import org.eclipse.jface.text.IRegion;
+import org.eclipse.jface.text.Region;
 import org.eclipse.jface.text.source.AnnotationRulerColumn;
 import org.eclipse.jface.text.source.CompositeRuler;
 import org.eclipse.jface.text.source.IAnnotationModel;
@@ -41,6 +49,7 @@ import org.eclipse.jface.text.source.SourceViewerConfiguration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
@@ -60,6 +69,8 @@ public class TextEditor {
 	private ContextBoundValue<Input<?>> activeInput;
 
 	private SourceViewer viewer;
+
+	private EditingContext editingContext;
 
 	private static final SharedColors SHARED_COLORS = new SharedColors();
 
@@ -125,6 +136,14 @@ public class TextEditor {
 		this.activeInput = activeInput;
 	}
 
+	@Inject
+	public void setEditingContext(EditingContext editingContext) {
+		if( viewer != null ) {
+			throw new IllegalArgumentException("The EditingContext has to be set before the editor is initialized");
+		}
+		this.editingContext = editingContext;
+	}
+
 	@PostConstruct
 	public void initUI(Composite pane) {
 		viewer = createSourceViewer(pane);
@@ -141,6 +160,75 @@ public class TextEditor {
 		viewer.setDocument(document/*, configuration.getAnnotationModel()*/);
 		if( activeInput != null ) {
 			activeInput.publish(input);
+		}
+
+		if (editingContext instanceof DelegatingEditingContext) {
+			((DelegatingEditingContext) editingContext).setDelegate(new EditingContext() {
+
+				@Override
+				public void triggerAction(TextEditAction action) {
+					// TODO Auto-generated method stub
+
+				}
+
+				@Override
+				public void showContextInformation(ContextInformation contextInformation) {
+					// TODO Auto-generated method stub
+
+				}
+
+				@Override
+				public void setSelection(IRegion selection) {
+					viewer.getTextWidget().setSelection(selection.getOffset(), selection.getOffset()+selection.getLength());
+				}
+
+				@Override
+				public void setCaretOffset(int offset, boolean keepSelection) {
+					viewer.getTextWidget().setCaretOffset(offset);
+				}
+
+				@Override
+				public void setCaretOffset(int offset) {
+					viewer.getTextWidget().setCaretOffset(offset);
+				}
+
+				@Override
+				public Subscription registerOnSelectionChanged(Consumer<IRegion> arg0) {
+					// TODO Auto-generated method stub
+					return new Subscription() {
+
+						@Override
+						public void dispose() {
+							// TODO Auto-generated method stub
+
+						}
+					};
+				}
+
+				@Override
+				public Subscription registerOnCaretOffsetChanged(Consumer<Integer> arg0) {
+					// TODO Auto-generated method stub
+					return new Subscription() {
+
+						@Override
+						public void dispose() {
+							// TODO Auto-generated method stub
+
+						}
+					};
+				}
+
+				@Override
+				public IRegion getSelection() {
+					Point selection = viewer.getTextWidget().getSelection();
+					return new Region(selection.x, selection.y - selection.y);
+				}
+
+				@Override
+				public int getCaretOffset() {
+					return viewer.getTextWidget().getCaretOffset();
+				}
+			});
 		}
 	}
 
