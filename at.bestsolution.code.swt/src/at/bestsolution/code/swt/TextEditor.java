@@ -228,6 +228,12 @@ public class TextEditor {
 				public int getCaretOffset() {
 					return viewer.getTextWidget().getCaretOffset();
 				}
+
+				@Override
+				public void revealCaret() {
+					// TODO Auto-generated method stub
+					
+				}
 			});
 		}
 	}

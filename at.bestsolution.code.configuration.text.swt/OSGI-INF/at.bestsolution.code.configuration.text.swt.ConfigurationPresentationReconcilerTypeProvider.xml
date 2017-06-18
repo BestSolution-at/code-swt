@@ -3,6 +3,6 @@
    <service>
       <provide interface="at.bestsolution.code.swt.services.PresentationReconcilerTypeProvider"/>
    </service>
-   <reference bind="registerModelProvider" cardinality="0..n" interface="org.eclipse.fx.code.editor.configuration.text.ConfigurationModelProvider" name="registerModelProvider" policy="dynamic" policy-option="greedy" unbind="unregisterModelProvider"/>
+   <reference bind="registerModelProvider" cardinality="0..n" interface="ConfigurationModelProvider" name="registerModelProvider" policy="dynamic" policy-option="greedy" unbind="unregisterModelProvider"/>
    <implementation class="at.bestsolution.code.configuration.text.swt.ConfigurationPresentationReconcilerTypeProvider"/>
 </scr:component>

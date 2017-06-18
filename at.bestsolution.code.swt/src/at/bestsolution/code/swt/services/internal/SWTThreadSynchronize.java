@@ -96,4 +96,19 @@ public class SWTThreadSynchronize implements ThreadSynchronize {
 		return future;
 	}
 
+	@Override
+	public <T> T block(BlockCondition<T> arg0) {
+		while( arg0.isBlocked() ) {
+			if( ! display.readAndDispatch() ) {
+				display.sleep();
+			}
+		}
+		return arg0.getValue();
+	}
+
+	@Override
+	public boolean isCurrent() {
+		return Display.getDefault().getThread() == Thread.currentThread();
+	}
+
 }
